@@ -1,0 +1,472 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Benguiat";
+    src: url(fontes/Benguiat\ Bold.ttf);
+}
+
+html, body{
+  overflow-x: hidden !important;
+}
+
+body{
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+
+button{
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 9;
+}
+
+section{
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+ button {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 16px 0px;
+  border-bottom: 1px solid white;
+}
+
+/* PRELOADER */
+#preLoader{
+  width: 100%;
+  height: 100vh;
+  background-color: #0C0102;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg{
+    width: 40vw;
+    height: auto;
+  }
+
+  path{
+    fill: rgba(168, 19, 19, 0.364);
+    stroke: rgba(168, 19, 19);
+    stroke-dasharray: 1200px;
+    stroke-dashoffset: 1200px;
+  }
+}
+
+.bgMonstro{
+  background-image: url(assets/bg-sec2.webp);
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  background-color: #0C0102;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hero{
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  position: relative;
+
+  picture{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+
+  .left, .right{
+    width: 30%;
+    z-index: 3;
+  }
+
+  .left {
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 4px;
+    }
+    h1{
+        font-size: 3.7vw;
+        font-family: "Benguiat";
+    }
+  }
+
+  .right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    p{
+        font-size: 2vw;
+        margin-bottom: 32px;
+        text-align: end;
+    }
+  }
+}
+
+.hero:before{
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0C0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.sectionCity{
+  flex-direction: column;
+  position: relative;
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .cards{ 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    .card{
+      background-image: url(assets/card1.webp);
+      width: 32%;
+      aspect-ratio: 16/9;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .card:nth-child(2){
+    background-image: url(assets/card2.webp);
+    }
+
+    .card:nth-child(3){
+    background-image: url(assets/card3.webp);
+    }
+
+  }
+}
+
+
+ .testimonialsSection{
+    flex-direction: column;
+  
+  
+  .logoTypes{
+    display: flex;
+    justify-content: space-between;  
+    align-items: end;
+  }
+
+  .testimonials{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    .testimonial{
+      width: 31%;
+    }
+  }
+}
+
+.sectionThankYou{
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #0C0102;
+  z-index: 2;
+
+  h2{
+    margin-bottom: 40px;
+  }
+
+  ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+footer{
+ width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("assets/bg-footer.webp");
+  background-size: cover;
+  background-position: center;
+
+  .footerContent{
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+
+      .logoFooter{
+        width: 30%;
+        h3{
+          font-size: 24px;
+          font-weight: 500;
+          letter-spacing: 4px;
+        }
+        h2{
+          font-size: 3.7vw;
+          font-family: "Benguiat";
+        } 
+      }
+
+        .sectionFooter{
+          display: flex;
+          flex: 1;
+          justify-content: end;
+          gap: 6%;
+          align-items: end;
+
+          h3{
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 12px;
+          }
+
+          .social{
+            display: flex;
+            flex-direction: column;
+            ul{
+              display: flex;
+              gap: 12px;
+            }
+          }
+    }
+  }
+
+    .footerLogos{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4vw;
+    }
+
+    .infiniteText{
+      width: max-content;
+      display: flex;
+
+      h3{
+        color: rgb(191,191,191);
+        font-size: 12vw;
+        font-family: "Benguiat", sans-serif;
+        mix-blend-mode: color-dodge;
+        animation: infiniteText 11s infinite linear;
+        padding-left: 7vw;
+      }
+    }
+}
+
+@keyframes infiniteText{
+  100%{ 
+    transform: translateX(-100%);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1500px) {
+  .sectionCity {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .sectionCity .cards .card{
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+}
+
+
+@media (max-width: 600px) {
+  section{
+    padding: 4vw;
+  }
+  h2{
+    font-size: 6vw;
+  }
+
+  header h2{
+      font-size: 27px;
+  }
+
+  .hero{
+      flex-direction: column;
+      padding: 26% 4vw 0;
+
+      .left, right{
+      width: 100%;
+      }
+
+      .left{
+        h3, h1{
+        text-align: center;
+      }
+      h1{
+        font-size: 12vw;
+      }
+      .right{
+        align-items: start;
+        p{
+          font-size: 5.5Vw;
+          text-align: start;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  .sectionCity{
+    margin-top: 80px;
+    button{
+      display: none;
+    }
+    
+    .cards{
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+    
+      .card{
+        width: 100%;
+      }
+    }
+  }
+
+  .testimonialsSection{
+    logoTypes{
+      img:nth-child(1),
+      img:nth-child(3){
+        width: 20%;
+      }
+      img:nth-child(2){
+        width: 40%;
+      }
+    }
+    
+    .testimonials{
+      flex-direction: column;
+      gap: 48px;
+    
+      .testimonial{
+        width: 100%;
+      }
+    }
+  }
+
+  .sectionThankYou{
+    margin: 40px 0 px 60px;
+    h2{
+      text-align: center;
+    }
+    ul{
+      width: max-content;
+      animation: infiniteText 12s infinite linear;
+      gap: 32px;
+    }
+  }
+
+  footer{
+    padding-top: 40px;
+      .footerContent{
+        padding: 4vw;
+        flex-direction: column;
+      }
+      .logoFooter{
+        width: 100%;
+      
+      h2, h3{
+        text-align: center;
+      }
+      h2 {
+        font-size: 12vw;
+      }
+    }
+      .sectionFooter{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+      .social{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 40px 0 32px;
+      }
+
+      .corporate{
+        width: 40%;
+      }
+
+       .partner{
+        width: 50%;
+
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+    .footerLogos{
+      margin-top: 40px;
+    }
+    .infiniteText h3{
+      font-size: 20vw;
+
+    }
+  }
+}
